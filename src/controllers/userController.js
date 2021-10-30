@@ -36,7 +36,7 @@ async function loginUser(req, res) {
         });
         res.redirect('/');
     } catch (error) {
-        console.log(error)
+        console.error(error)
         res.locals.error = error;
         res.render('user/login', { ...req.body });
     }

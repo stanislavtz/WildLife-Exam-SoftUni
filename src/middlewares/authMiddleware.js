@@ -41,7 +41,7 @@ exports.isAuthenticated = function (req, res, next) {
 exports.isAuthorized = async function (req, res, next) {
     const post = await postService.getOneById(req.params.postId);
 
-    if(req.user && post.owner == req.user._id) {
+    if(req.user && post.owner._id == req.user._id) {
         return next();
     }
 
@@ -52,7 +52,7 @@ exports.isAuthorized = async function (req, res, next) {
 exports.isNotOwner = async function (req, res, next) {
     const post = await postService.getOneById(req.params.postId);
 
-    if(req.user && post.owner != req.user._id) {
+    if(req.user && post.owner._id != req.user._id) {
         return next();
     }
 

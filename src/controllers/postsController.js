@@ -42,10 +42,16 @@ async function getAllPosts(req, res) {
     }
 }
 
+async function getUserPosts(req, res) {
+    const posts = await postsService.getUserPosts(req.user._id);
+
+    res.render('post/my-posts', { posts })
+}
+
 async function getDetailsPage(req, res) {
     try {
         const post = await postsService.getOneById(req.params.postId);
-        if (post.owner == req.user?._id) {
+        if (post.owner._id == req.user?._id) {
             res.locals.user.isOwner = true;
         }
 
@@ -160,10 +166,6 @@ router.get('/:postId/delete', isAuthorized, deletePost);
 router.get('/:postId/upVote', isNotOwner, upVotePost);
 router.get('/:postId/downVote', isNotOwner, downVotePost);
 
-router.get('/:userId/my-posts', async (req, res) => {
-    const posts = await postsService.usersPosts(req.user._id);
-
-    res.render('post/my-posts', { posts })
-});
+router.get('/:userId/my-posts', getUserPosts);
 
 module.exports = router;
