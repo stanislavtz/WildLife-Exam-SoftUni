@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <!-- Do not forget to change the path to the css file -->
+    <link href="/static/css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="box">
+        {{>errorMsg}}
+        {{>header}}
+
+        {{{body}}}
+
+        {{>footer}}
+    </div>
+</body>
+
+</html>
