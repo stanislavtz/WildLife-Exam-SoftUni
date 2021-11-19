@@ -2,7 +2,9 @@
 
 This is my exam mini project from JavaScript Back-End SofUnis's education course.
 
-It had built using Nodejs runtime entertament.
+It had built using: 
+
+**Nodejs** runtime entertament.
 
 **Express** framework.
 
