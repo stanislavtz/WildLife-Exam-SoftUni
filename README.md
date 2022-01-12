@@ -4,16 +4,16 @@ This is my exam mini project from JavaScript Back-End SofUnis's education course
 
 It had built using: 
 
-**Nodejs** runtime entertament.
+**Nodejs** runtime environment.
 
 **Express** framework.
 
 **MongoDB** document-oriented database.
 
-**Mongoose** is used for objeck schema modelling.
+**Mongoose** is used for object schema modelling.
 
-**Express-handlebars** - templates compiler for visializating.
+**Express-handlebars** - templates compiler for visualization.
 
 **Bcrypt** - used for password hashing.
 
-**JWT** - secure autorization.
+**JWT** - secure authorization.
