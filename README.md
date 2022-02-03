@@ -1,8 +1,7 @@
 # WildLife
 
 This is my exam mini project from JavaScript Back-End SofUnis's education course.
-
-It had built using: 
+It is multypage application using: 
 
 **Nodejs** runtime environment.
 
