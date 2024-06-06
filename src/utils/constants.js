@@ -10,6 +10,6 @@ exports.URI = `mongodb://localhost:27017/${projectName}`;
 
 exports.SALT_ROUNDS = 10;
 
-exports.JWT_SECRET = '7VcRV31XVNriztldv03wxZr0HK3PtO08';
+exports.JWT_SECRET = '';
 
 exports.COOKIE_NAME = `${projectName.toLowerCase()}-cookie`;
